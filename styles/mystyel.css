@@ -1,0 +1,586 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/gilroy-medium.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-medium.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-medium.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-medium.svg#gilroy-medium') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/gilroy-bold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-bold.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-bold.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-bold.svg#gilroy-bold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+:root {
+    --black: #070707;
+    --font-family: "Gilroy-Bold", sans-serif;
+    --second-family: "Gilroy-Medium", sans-serif;
+    --color_star: #050505;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {}
+
+.container {
+    max-width: 1445px;
+    width: 100%;
+    /* min-height: 4759px;
+    height: 45%; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 943px;
+    width: 100%;
+    min-height: 768px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 19px;
+}
+
+.nav_ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 942px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 132.64px;
+}
+
+.nav_ul li {
+    max-width: 83px;
+    width: 100%;
+    text-decoration: none;
+    width: 83px;
+}
+
+.nav-link {
+    display: contents;
+    max-width: 83px;
+    width: 100%;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #828282;
+    transition: transform 0.5s ease;
+}
+
+/* Активный пункт меню */
+.nav-link .active {
+    color: var(--font-family);
+    /* Цвет активного пункта */
+}
+
+/* Эффект наведения */
+.nav-link :hover {
+    transform: scale(2, 2);
+    /* Увеличение размера */
+    color: #0069d9;
+    /* Цвет при наведении */
+}
+
+/* Если хотите использовать :active вместо класса.active */
+.nav-link :active {
+    color: #007bff;
+    /* Цвет активного пункта */
+}
+
+.separator {}
+
+.menu-content {
+    margin: 0 auto;
+    max-width: 943px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-image: url("styles/images/Group 2.1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 31px;
+
+}
+
+.menu-content-titles {
+    max-width: 942px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.menu-content-title1 {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--black);
+}
+
+.menu-content-title1 h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--black);
+}
+
+.menu-content-title2 {}
+
+.menu-content-lenguage {
+    position: relative;
+    left: 64px;
+    align-items: center;
+    /* Центрирование по вертикали */
+    margin-top: 50px;
+    /* Отступ сверху */
+    transform: rotate(270deg);
+    /* Поворачиваем контейнер на 90 градусов */
+    transform-origin: left bottom;
+    ;
+    /* Устанавливаем точку поворота */
+}
+
+.lang {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.lang.active {
+    color: blue;
+    /* Цвет текста при выборе */
+}
+
+.menu-content-img {}
+
+.main_contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_aboyt-content {
+    width: 1445px;
+    height: 506px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* gap: 31px; */
+    background: #f6f6f6;
+}
+
+.main_block-about h2 {
+    margin-top: 120px;
+    max-width: 943px;
+    width: 100%;
+    height: 34px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+.main_block_text {
+    margin-top: 18px;
+    max-width: 943px;
+    width: 100%;
+    height: 144px;
+
+}
+
+.main_block_text p {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 40px;
+    margin: 2em 0;   /* Отступы для абзацев */
+    white-space: normal;   /* Позволяет переносить текст */
+}
+
+.main_skills-content {
+    max-width: 943px;
+    width: 100%;
+    height: 615px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* gap: 31px; */
+}
+
+.main_skills-contents-title {
+    margin-top: 96px;
+    max-width: 943px;
+    width: 100%;
+    height: 34px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+.main_skills-content-text {
+    margin-top: 69px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--black);
+}
+
+.main_skills-contents-title h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+.main_skills-content-text p {
+    margin-top: 69px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--black);
+}
+
+.main_skills-content .skils-icons {
+    margin-top: 83px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 90px;
+}
+
+.main_skills-content .skils-icons .skils-icon {
+    max-width: 180px;
+    width: 100%;
+    height: 206px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main_skills-content .skils-icons .skils-icon p {
+    max-width: 166px;
+    width: 100%;
+    height: 34px;
+    margin-top: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #828282;
+}
+
+.skils-icon-stars {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main_portfolio-contents {
+    width: 1445px;
+    height: 2253px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #f6f6f6;
+}
+
+.main_portfolio-content-section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 113px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+.main_portfolio-content-section-title h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+.main_portfolio-content-imga {
+    max-width: 936px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.main_portfolio-content-imga img {
+    display: flex;
+    padding-top: 54px;
+}
+
+.portfolio-link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: var(--black);
+}
+
+.footer-contents {
+    margin: 0 auto;
+    max-width: 1451px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 114px;
+    gap: 20px;
+}
+
+.footer-contents-title {
+    margin: 0 auto;
+    max-width: 1451px;
+    width: 100%;
+    min-height: 43px;
+    height: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: var(--black);
+}
+
+.footer-contents-line {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--black);
+}
+
+.footer-contents-buttons {
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+    min-height: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 9px;
+    gap: 20px;
+}
+
+.footer-contents-button-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer-contents-button-a a {
+    position: relative;
+    top: 1px;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-contents-button-a:hover svg path {
+    transform: fill 0.9s;
+    /* Увеличение размера */
+    fill: #0069d9;
+    /* Цвет при наведении */
+}
+
+.footer-contents-button-text {
+    /* position: absolute; */
+    position: relative; /* Измените на relative */
+    /* margin-left: -168px; Добавьте отступ между "Send" и "message" */
+    top: -52%;
+    left: -1%;
+    transform: translate(141%, -38%);
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footer-contents-button-text:last-child {
+    margin-left: 5px;
+    /* add 5px margin between "Send" and "message" */
+}
+
+.footer-contents-button-svg {}
+
+.footer-icons {
+    margin-top: 59px;
+    max-width: 342px;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    color: var(--black);
+    font-size: 18px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.footer-icons-a:hover svg path {
+    transform: fill 0.9s;
+    /* Увеличение размера */
+    fill: #0069d9;
+    /* Цвет при наведении */
+}
+
+.footer-icons-a:hover svg {
+    transform: scale(1.1, 1.1);
+    /* Увеличение размера */
+    fill: #0069d9;
+    /* Цвет при наведении */
+}
+
+.dev-logo {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    gap: 10px;
+}
+
+/* Стилизация контейнера слайдера */
+.slider {
+    position: relative;
+    width: 943px;
+    height: 387px;
+    overflow: hidden;
+}
+
+/* Стилизация трека слайдера */
+.slider-track {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+/* Стилизация элементов слайдера */
+.slider-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стилизация предыдущей и следующей стрелок */
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+
+
+/* Добавляем CSS-стиль для кнопки */
+/* #back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+#back-to-top.show {
+    display: block;
+} */

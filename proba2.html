@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/mystyel.css">
+    <link rel="stylesheet" href="styles/styles-rating.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav_ul">
+                    <li><a href="#" class="nav_ul-li-a active">Home</a></li>
+                    <li><a href="#about-me" class="nav_ul-li-a">About me</a></li>
+                    <li><a href="#skills" class="nav_ul-li-a">Skills</a></li>
+                    <li><a href="#portfolio" class="nav_ul-li-a">Portfolio</a></li>
+                    <li><a href="#contacts" class="nav_ul-li-a">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="separator"></div>
+            <div class="menu-content">
+                <div class="menu-content-titles">
+                    <div class="menu-content-title1">
+                        <h1>Denis <br> Novik</h1>
+                    </div>
+                    <div class="menu-content-title2">
+                        UX | UI designer<br>24 years old, Minsk
+                    </div>
+                    <div class="menu-content-lenguage">
+                        <a href="#" class="lang active" data-lang="ru">RU</a>
+                        <span>|</span>
+                        <a href="#" class="lang" data-lang="en">ENG</a>
+                    </div>
+                </div>
+                <div class="menu-content-img">
+                    <div class="slider">
+                        <div class="slider-track">
+                            <div class="slider-item">
+                                <img src="styles/images/Group 2.1.png" alt="photo">
+                            </div>
+                            <!-- Остальные элементы -->
+                        </div>
+                        <button class="slider-prev">‹</button>
+                        <button class="slider-next">›</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main_contents">
+            <div class="main_aboyt-content" id="about-me">
+                <div class="main_block-about">
+                    <h2>About me</h2>
+                </div>
+                <div class="main_block_text">
+                    <p>Hi, I'm Denis – UX/UI designer from Minsk. <br> in design and everything connected with it.</p>
+                    <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const texts = {
+            en: {
+                home: "Home",
+                about: "About me",
+                skills: "Skills",
+                portfolio: "Portfolio",
+                contacts: "Contacts",
+                aboutMeTitle: "About me",
+                aboutMeContent: "Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it."
+            },
+            ru: {
+                home: "Главная",
+                about: "О себе",
+                skills: "Навыки",
+                portfolio: "Портфолио",
+                contacts: "Контакты",
+                aboutMeTitle: "О себе",
+                aboutMeContent: "Привет, я Денис – UX/UI дизайнер из Минска. Меня интересует дизайн и все, что с ним связано."
+            }
+        };
+
+        let currentLang = 'en';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+
+            // Обновить текст в навигации
+            document.querySelector('.nav_ul li:nth-child(1) a').innerText = texts[lang].home;
+            document.querySelector('.nav_ul li:nth-child(2) a').innerText = texts[lang].about;
+            document.querySelector('.nav_ul li:nth-child(3) a').innerText = texts[lang].skills;
+            document.querySelector('.nav_ul li:nth-child(4) a').innerText = texts[lang].portfolio;
+            document.querySelector('.nav_ul li:nth-child(5) a').innerText = texts[lang].contacts;
+
+            // Обновить заголовок секции "About me"
+            document.querySelector('.main_block-about h2').innerText = texts[lang].aboutMeTitle;
+
+            // Обновить текст в блоке "About me"
+            const aboutMeContent = document.querySelector('.main_block_text');
+            aboutMeContent.children[0].innerText = texts[lang].aboutMeContent;
+        }
+
+        document.querySelectorAll('.lang').forEach(langLink => {
+            langLink.addEventListener('click', (e) => {
+                const selectedLang = e.target.dataset.lang;
+                updateLanguage(selectedLang);
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

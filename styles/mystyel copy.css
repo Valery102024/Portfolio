@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/gilroy-medium.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-medium.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-medium.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-medium.svg#gilroy-medium') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/gilroy-bold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-bold.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-bold.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-bold.svg#gilroy-bold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+:root {
+    --black: #070707;
+    --font-family: "Gilroy-Bold", sans-serif;
+    --second-family: "Gilroy-Medium", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 1445px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 943px;
+    width: 100%;
+    min-height: 768px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-content {
+    margin: 0 auto;
+    max-width: 943px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-image: url("styles/images/Group 2.1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 31px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 19px;
+}
+
+.nav_ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 942px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 132.64px;
+}
+
+.nav_ul li {
+    max-width: 83px;
+    width: 100%;
+    text-decoration: none;
+    width: 83px;
+}
+
+.nav_ul-li-a {
+    display: contents;
+    max-width: 83px;
+    width: 100%;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #828282;
+    transition: transform 0.5s ease;
+}
+
+/* Активный пункт меню */
+.nav_ul-li-a.active {
+    color: var(--font-family);
+    /* Цвет активного пункта */
+}
+
+/* Эффект наведения */
+.nav_ul-li-a:hover {
+    transform: scale(2, 2);
+    /* Увеличение размера */
+    color: #0069d9;
+    /* Цвет при наведении */
+}
+
+/* Если хотите использовать :active вместо класса.active */
+.nav_ul-li-a:active {
+    color: #007bff;
+    /* Цвет активного пункта */
+}
+
+.separator {
+    position: relative;
+    top: 32px;
+    margin: 0 auto;
+    max-width: 942px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.menu-content-titles {
+    max-width: 942px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menu-content-title1 {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--black);
+}
+
+.menu-content-lenguage {
+    position: relative;
+    left: 64px;
+    align-items: center;
+    /* Центрирование по вертикали */
+    margin-top: 50px;
+    /* Отступ сверху */
+    transform: rotate(270deg);
+    /* Поворачиваем контейнер на 90 градусов */
+    transform-origin: left bottom;
+    ;
+    /* Устанавливаем точку поворота */
+}
+
+.lang {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.lang.active {
+    color: blue;
+    /* Цвет текста при выборе */
+}
+
+
+/* Стили для блока "О себе" */
+
+.main_contents {
+    margin: 0 auto;
+    max-width: 1445px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 96px;
+}
+
+.main_aboyt-content {
+    margin: 0 auto;
+    max-width: 1445px;
+    width: 100%;
+    min-height: 506px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1445px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--black);
+    background: #f6f6f6;
+}
+
+
+/* Стили для блока "О себе" */
+
+.main_block-about {
+    /* position: relative;*/
+    top: 120px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+
+.main_block_text {
+    max-width: 486px;
+    width: 100%;
+    min-height: 218px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--black);
+}
+
+/* Стили для блока "Навыки" */
+
+.main_skills-content {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+/* Стили для блока "Портфолио" */
+
+.main_portfolio-content {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+}
+
+/* Стили для блока "Контакты" */
+
+.footer-contents {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    text-align: center;
+    color: var(--black);
+   
+}

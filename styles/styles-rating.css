@@ -1,0 +1,75 @@
+:root {
+    --color_star: #050505;
+}
+.rating {
+    direction: rtl;
+    font-size: 28px;
+    unicode-bidi: bidi-override;
+    margin-top: 10px;
+}
+
+.star1 {
+    cursor: pointer;
+    color: lightgray;
+    margin: 0 auto;
+    max-width: 154px;
+    width: 100%;
+}
+
+.star1:hover,
+.star1:hover ~ .star1 {
+    color: var(--color_star);
+}
+
+.star1.selected {
+    color: var(--color_star);
+}
+
+.star2 {
+    cursor: pointer;
+    color: lightgray;
+    margin: 0 auto;
+    max-width: 154px;
+    width: 100%;
+}
+
+.star2:hover,
+.star2:hover ~ .star1 {
+    color: var(--color_star);
+}
+
+.star2.selected {
+    color: var(--color_star);
+}
+.star3 {
+    cursor: pointer;
+    color: lightgray;
+    margin: 0 auto;
+    max-width: 154px;
+    width: 100%;
+}
+
+.star3:hover,
+.star3:hover ~ .star1 {
+    color: var(--color_star);
+}
+
+.star3.selected {
+    color: var(--color_star);
+}
+.star4 {
+    cursor: pointer;
+    color: lightgray;
+    margin: 0 auto;
+    max-width: 154px;
+    width: 100%;
+}
+
+.star4:hover,
+.star4:hover ~ .star1 {
+    color: var(--color_star);
+}
+
+.star4.selected {
+    color: var(--color_star);
+}
